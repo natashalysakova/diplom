@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="diplom.InfoViewer">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="webBrowser1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAgAAAAAACAAAACAIAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InfoViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="diplom.SourceViewer">
+    <Position X="4.25" Y="5.75" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="saveFileDialog1" Hidden="true" />
+      <Field Name="webBrowser1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAADAgAAAAAACAAAACAAAYAAAAAGAAAQAAAAA=</HashCode>
+      <FileName>SourceViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="diplom.Program">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="diplom.Form1">
+    <Position X="6" Y="5.75" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="button3" Hidden="true" />
+      <Field Name="button4" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAACAAAACAEA4AAAAAHAIAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="diplom.AlgorythmForm">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="button3" Hidden="true" />
+      <Field Name="button4" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label13" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="tableLayoutPanel1" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="textBox10" Hidden="true" />
+      <Field Name="textBox11" Hidden="true" />
+      <Field Name="textBox12" Hidden="true" />
+      <Field Name="textBox13" Hidden="true" />
+      <Field Name="textBox14" Hidden="true" />
+      <Field Name="textBox15" Hidden="true" />
+      <Field Name="textBox16" Hidden="true" />
+      <Field Name="textBox17" Hidden="true" />
+      <Field Name="textBox18" Hidden="true" />
+      <Field Name="textBox19" Hidden="true" />
+      <Field Name="textBox2" Hidden="true" />
+      <Field Name="textBox20" Hidden="true" />
+      <Field Name="textBox21" Hidden="true" />
+      <Field Name="textBox22" Hidden="true" />
+      <Field Name="textBox23" Hidden="true" />
+      <Field Name="textBox24" Hidden="true" />
+      <Field Name="textBox25" Hidden="true" />
+      <Field Name="textBox26" Hidden="true" />
+      <Field Name="textBox27" Hidden="true" />
+      <Field Name="textBox28" Hidden="true" />
+      <Field Name="textBox29" Hidden="true" />
+      <Field Name="textBox3" Hidden="true" />
+      <Field Name="textBox30" Hidden="true" />
+      <Field Name="textBox31" Hidden="true" />
+      <Field Name="textBox32" Hidden="true" />
+      <Field Name="textBox33" Hidden="true" />
+      <Field Name="textBox34" Hidden="true" />
+      <Field Name="textBox35" Hidden="true" />
+      <Field Name="textBox36" Hidden="true" />
+      <Field Name="textBox4" Hidden="true" />
+      <Field Name="textBox5" Hidden="true" />
+      <Field Name="textBox6" Hidden="true" />
+      <Field Name="textBox7" Hidden="true" />
+      <Field Name="textBox8" Hidden="true" />
+      <Field Name="textBox9" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>8CAAAIAAASAAABCAEACAAABCIEB4AAAAEHAIACAAAKA=</HashCode>
+      <FileName>AlgorythmForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instance" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_boxes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Forms.ContainerControl" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Forms.ScrollableControl" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Forms.Control" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ComponentModel.Component" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.MarshalByRefObject" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="System.Collections.Generic.List&lt;T&gt;.Enumerator" Collapsed="true">
+        <TypeIdentifier />
+        <Lollipop Position="0.2" />
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="diplom.IAlgorythm">
+    <Position X="2.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

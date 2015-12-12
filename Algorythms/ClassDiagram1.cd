@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Algorythms.AlgorytmsExtension">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAEAAAAAAA=</HashCode>
+      <FileName>AlgorytmsExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Algorythms.BranchAndBound" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Algorythms.BranchAndBound.Point" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BranchAndBound.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAQQAECAAAAAAAAAAAAIgAAA=</HashCode>
+      <FileName>BranchAndBound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Algorythms.CombineMethod" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAECAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>CombineMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Algorythms.DynamicalProgramming" BaseTypeListCollapsed="true">
+    <Position X="5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAECAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>DynamicalProgramming.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Algorythms.BaseAlgorythm">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAECAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseAlgorythm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Algorythms.IAlgorythm">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAECAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IAlgorythm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
