@@ -19,10 +19,17 @@ namespace Algorythms
             }
         }
 
-        public override string Calculate(List<List<int>> data)
+        public CombineMethod(List<List<int>> data) : base(data)
         {
-            base.Calculate(data);
 
+        }
+
+        public CombineMethod() : base()
+        {
+        }
+
+        public override string Calculate()
+        {
             return string.Empty;
         }
 

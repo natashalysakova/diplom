@@ -8,17 +8,42 @@ namespace Algorythms
 {
     public abstract class BaseAlgorythm : IAlgorythm
     {
-        abstract public string Name
-        {
-            get;
-        }
-
-        public virtual string Calculate(List<List<int>> data)
+        public BaseAlgorythm(List<List<int>> data)
         {
             if (data == null)
                 throw new NullReferenceException();
 
             foreach (var item in data)
+            {
+                if (item == null)
+                    throw new NullReferenceException();
+            }
+
+            Data = data;
+        }
+
+        public BaseAlgorythm()
+        {
+
+        }
+
+        public List<List<int>> Data
+        {
+            get;
+            set;
+        }
+
+        abstract public string Name
+        {
+            get;
+        }
+
+        virtual public string Calculate()
+        {
+            if (Data == null)
+                throw new NullReferenceException();
+
+            foreach (var item in Data)
             {
                 if (item == null)
                     throw new NullReferenceException();

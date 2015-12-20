@@ -1,6 +1,6 @@
 ﻿namespace diplom
 {
-    partial class Form1
+    partial class SelectAlgorythm
     {
         /// <summary>
         /// Required designer variable.

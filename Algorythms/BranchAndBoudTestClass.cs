@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.IO;
+using System.Diagnostics;
 
 namespace Algorythms
 {
@@ -15,7 +16,7 @@ namespace Algorythms
         {
             arr = new List<List<int>>()
             {
-                new List<int>() {  -1, 90, 80, 40, 100},
+                                new List<int>() {  -1, 90, 80, 40, 100},
                 new List<int>() { 60, -1, 40, 50, 70},
                 new List<int>() { 50, 30, -1, 60, 20},
                 new List<int>() { 10, 70, 20, -1, 50},
@@ -28,10 +29,25 @@ namespace Algorythms
         [ExpectedException(typeof(NullReferenceException))]
         public void CalculateTest()
         {
-            string s = new BranchAndBound().Calculate(arr);
-            Assert.AreNotEqual(0, s.Length);
+            arr = new List<List<int>>();
+            var random = new Random();
 
-            new BranchAndBound().Calculate(null);
+            for (int i = 0; i < 50; i++)
+            {
+                arr.Add(new List<int>());
+                for (int j = 0; j < 50; j++)
+                {
+                    arr[i].Add(random.Next(10));
+                }
+            }
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            string s = new BranchAndBound(arr).Calculate();
+            stopwatch.Stop();
+            Debug.WriteLine("Результат: " + s, "Алгоритм працював " + stopwatch.ElapsedMilliseconds + " мілісекунд");
+
+            new BranchAndBound(null).Calculate();
         }
 
         [TestMethod]
@@ -47,7 +63,8 @@ namespace Algorythms
 
             };
 
-            int[] res = BranchAndBound.GetDi(arr);
+            BranchAndBound bb = new BranchAndBound(arr);
+            int[] res = bb.GetDi();
             int[] assert = new[] { 0, 40, 0, 10, 0 };
 
             for (int i = 0; i < res.Length; i++)
@@ -59,7 +76,8 @@ namespace Algorythms
         [TestMethod]
         public void GetDiWithoutZero()
         {
-            int[] res = BranchAndBound.GetDi(arr, false);
+            BranchAndBound bb = new BranchAndBound(arr);
+            int[] res = bb.GetDi(false);
             int[] assert = new[] { 40, 40, 20, 10, 20 };
 
             for (int i = 0; i < res.Length; i++)
@@ -81,7 +99,8 @@ namespace Algorythms
 
             };
 
-            int[] res = BranchAndBound.GetDj(arr);
+            BranchAndBound bb = new BranchAndBound(arr);
+            int[] res = bb.GetDj();
             int[] assert = new[] { 0, 30, 20, 0, 20 };
 
             for (int i = 0; i < res.Length; i++)
@@ -93,7 +112,8 @@ namespace Algorythms
         [TestMethod]
         public void GetDjWithoutZero()
         {
-            int[] res = BranchAndBound.GetDj(arr, false);
+            BranchAndBound bb = new BranchAndBound(arr);
+            int[] res = bb.GetDj(false);
             int[] assert = new[] { 10, 30, 20, 20, 20 };
 
             for (int i = 0; i < res.Length; i++)

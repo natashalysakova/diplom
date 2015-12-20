@@ -59,14 +59,28 @@ namespace diplom
         {
             List<List<int>> arr = LoadFromTextBoxes();
 
+            IAlgorythm newAlgorythm = Agent.Analyse(arr);
+            if (newAlgorythm.GetType() != instance.GetType())
+            {
+                DialogResult result = MessageBox.Show("Інтелектуальний агент вважає, що для введених даних \nкраще використовувати " + newAlgorythm.Name + "\nЗмінити обраний алгоритм на запропонований?" , "Змінити алгоритм?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                switch (result)
+                {
+                    case DialogResult.Cancel: return;
+
+                    case DialogResult.Yes: instance = newAlgorythm;
+                        break;
+                }
+            }
+
+            instance.Data = arr;
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            string s = instance.Calculate(arr);
+            string s = instance.Calculate();
             stopwatch.Stop();
 
             MessageBox.Show(
                 
-                "Результат: " + s,"Алгоритм працював " + stopwatch.ElapsedMilliseconds + " мілісекунд",
+                "Результат: " + s, instance.Name + " працював " + stopwatch.ElapsedMilliseconds + " мілісекунд",
                 MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1
                 );
 

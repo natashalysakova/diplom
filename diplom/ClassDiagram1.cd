@@ -37,22 +37,6 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="diplom.Form1">
-    <Position X="6" Y="5.75" Width="1.5" />
-    <Members>
-      <Field Name="button1" Hidden="true" />
-      <Field Name="button2" Hidden="true" />
-      <Field Name="button3" Hidden="true" />
-      <Field Name="button4" Hidden="true" />
-      <Field Name="components" Hidden="true" />
-      <Method Name="Dispose" Hidden="true" />
-      <Method Name="InitializeComponent" Hidden="true" />
-    </Members>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACEAAAAAAACAAAACAEA4AAAAAHAIAAAAAAA=</HashCode>
-      <FileName>Form1.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="diplom.AlgorythmForm">
     <Position X="2.5" Y="5.75" Width="1.5" />
     <Members>
@@ -154,22 +138,23 @@
     <TypeIdentifier />
   </Class>
   <Class Name="System.Object" Collapsed="true">
-    <Position X="8" Y="4.25" Width="1.5" />
+    <Position X="5.75" Y="3" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
-    <Position X="0.5" Y="8.75" Width="1.5" />
-    <NestedTypes>
-      <Struct Name="System.Collections.Generic.List&lt;T&gt;.Enumerator" Collapsed="true">
-        <TypeIdentifier />
-        <Lollipop Position="0.2" />
-      </Struct>
-    </NestedTypes>
+    <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="diplom.IAlgorythm">
-    <Position X="2.5" Y="9.5" Width="1.5" />
+  <Class Name="diplom.SelectAlgorythm">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAEA4AAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SelectAlgorythm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Algorythms.IAlgorythm">
+    <Position X="4.25" Y="8.5" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agent.cs" />
     <Compile Include="AlgorytmsExtension.cs" />
     <Compile Include="BaseAlgorythm.cs" />
     <Compile Include="BranchAndBound.cs" />
     <Compile Include="CombineMethod.cs" />
     <Compile Include="DynamicalProgramming.cs" />
+    <Compile Include="DynamicalProgrammingTestClass.cs" />
     <Compile Include="ExtensionMethodsTestClass.cs" />
     <Compile Include="IAlgorythm.cs" />
+    <Compile Include="Perfomance test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BranchAndBoudTestClass.cs" />
   </ItemGroup>

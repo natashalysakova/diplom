@@ -8,9 +8,10 @@ namespace Algorythms
 {
     public interface IAlgorythm
     {
-        string Calculate(List<List<int>> data);
+        string Calculate();
         string GetDescription();
         string GetSourceCode();
         string Name { get; }
+        List<List<int>> Data { get; set; }
     }
 }

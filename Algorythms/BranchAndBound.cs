@@ -11,6 +11,12 @@ namespace Algorythms
     {
         public const int M = -1;
 
+        public BranchAndBound(List<List<int>> data) : base(data) { }
+
+        public BranchAndBound() : base()
+        {
+        }
+
         public override string Name
         {
             get
@@ -19,36 +25,34 @@ namespace Algorythms
             }
         }
 
-        override public string Calculate(List<List<int>> data)
+        override public string Calculate()
         {
-            base.Calculate(data);
-
             var answer = new List<string>();
             var lowHamiltonBound = new Dictionary<Point, int>();
 
-            var di = GetDi(data);
+            var di = GetDi();
 
             do
             {
-                for (var i = 0; i < data.Count; i++)
+                for (var i = 0; i < Data.Count; i++)
                 {
-                    for (var j = 0; j < data[i].Count; j++)
+                    for (var j = 0; j < Data[i].Count; j++)
                     {
-                        if (data[i][j] < 0)
+                        if (Data[i][j] < 0)
                             continue;
-                        data[i][j] -= di[i];
+                        Data[i][j] -= di[i];
                     }
                 }
 
-                var dj = GetDj(data);
+                var dj = GetDj();
 
-                for (var i = 0; i < data.Count; i++)
+                for (var i = 0; i < Data.Count; i++)
                 {
-                    for (var j = 0; j < data.Count; j++)
+                    for (var j = 0; j < Data.Count; j++)
                     {
-                        if (data[j][i] < 0)
+                        if (Data[j][i] < 0)
                             continue;
-                        data[j][i] -= dj[i];
+                        Data[j][i] -= dj[i];
                     }
                 }
 
@@ -56,15 +60,15 @@ namespace Algorythms
                 var h = di.Sum() + dj.Sum();
 
 
-                di = GetDi(data, false);
-                dj = GetDj(data, false);
+                di = GetDi(false);
+                dj = GetDj(false);
                 var tmp = new List<List<int>>();
-                for (var i = 0; i < data.Count; i++)
+                for (var i = 0; i < Data.Count; i++)
                 {
                     tmp.Add(new List<int>());
-                    for (var j = 0; j < data[i].Count; j++)
+                    for (var j = 0; j < Data[i].Count; j++)
                     {
-                        if (data[i][j] == 0)
+                        if (Data[i][j] == 0)
                         {
                             var summ = di[i] + dj[j];
                             tmp[i].Add(summ);
@@ -72,7 +76,7 @@ namespace Algorythms
                         }
                         else
                         {
-                            tmp[i].Add(data[i][j]);
+                            tmp[i].Add(Data[i][j]);
                         }
                     }
                 }
@@ -91,38 +95,38 @@ namespace Algorythms
 
                 //Исключение ребра проводим путем замены элемента dij = 0 на M, после чего осуществляем очередное приведение матрицы расстояний для образовавшегося подмножества(1 *, 4 *), в результате получим редуцированную матрицу.
 
-                data[normal.Key.Row][normal.Key.Col] = M;
-                di = GetDi(data);
-                dj = GetDj(data);
+                Data[normal.Key.Row][normal.Key.Col] = M;
+                di = GetDi();
+                dj = GetDj();
 
-                for (var i = 0; i < data.Count; i++)
+                for (var i = 0; i < Data.Count; i++)
                 {
-                    for (var j = 0; j < data[i].Count; j++)
+                    for (var j = 0; j < Data[i].Count; j++)
                     {
                         if (i == normal.Key.Row || j == normal.Key.Col)
-                            data[i][j] = M;
+                            Data[i][j] = M;
                     }
                 }
 
                 var otherValue = h + di.Sum() + dj.Sum();
-                Debug.WriteLine("H = " + normalValue);
-                Debug.WriteLine("H' = " + otherValue);
+                //Debug.WriteLine("H = " + normalValue);
+                //Debug.WriteLine("H' = " + otherValue);
 
-                data[normal.Key.Col][normal.Key.Row] = M;
-                di = GetDi(data);
-                dj = GetDj(data);
+                Data[normal.Key.Col][normal.Key.Row] = M;
+                di = GetDi();
+                dj = GetDj();
 
 
                 lowHamiltonBound.Add(normal.Key, otherValue <= normalValue ? otherValue : normalValue);
 
-                data.PrintMatrix(di, dj, M);
+                //Data.PrintMatrix(di, dj, M);
             } while (true);
 
 
             for (var i = 0; answer.Count < lowHamiltonBound.Count; i++)
             {
                 var pair = lowHamiltonBound.ToList()[i];
-                answer.Add($"({pair.Key.Row}, {pair.Key.Col})");
+                answer.Add((pair.Key.Row+1).ToString());
 
                 var c = lowHamiltonBound.ToList().First(x => x.Key.Row == pair.Key.Col);
                 i = lowHamiltonBound.ToList().IndexOf(c) - 1;
@@ -148,27 +152,28 @@ namespace Algorythms
             //    i = lowHamiltonBound.ToList().IndexOf(c) - 1;
             //}
 
-            answer.Add(answer[0]);
+            if(answer.Count > 0)
+                answer.Add(answer[0]);
 
-            return string.Join(" => ", answer);
+            return string.Join(" -> ", answer);
         }
 
-        internal static int[] GetDi(List<List<int>> data, bool withZero = true)
+        internal int[] GetDi(bool withZero = true)
         {
-            var di = new int[data.Count];
-            for (var i = 0; i < data.Count; i++)
+            var di = new int[Data.Count];
+            for (var i = 0; i < Data.Count; i++)
             {
-                di[i] = data[i].GetMinimum(withZero);
+                di[i] = Data[i].GetMinimum(withZero);
             }
             return di;
         }
 
-        internal static int[] GetDj(List<List<int>> data, bool withZero = true)
+        internal int[] GetDj(bool withZero = true)
         {
-            var transpData = data.TransData();
-            var dj = new int[data.Count];
+            var transpData = Data.TransData();
+            var dj = new int[Data.Count];
 
-            for (var i = 0; i < data.Count; i++)
+            for (var i = 0; i < Data.Count; i++)
             {
                 dj[i] = transpData[i].GetMinimum(withZero);
             }
