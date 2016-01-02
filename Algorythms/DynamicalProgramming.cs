@@ -113,7 +113,5 @@ namespace Algorythms
 
             return globalMin;
         }
-
-
     }
 }

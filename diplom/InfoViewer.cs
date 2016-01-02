@@ -20,7 +20,7 @@ namespace diplom
         {
             InitializeComponent();
 
-            uri = new Uri(Directory.GetCurrentDirectory() + instance.GetSourceCode());
+            uri = new Uri(Directory.GetCurrentDirectory() + instance.GetDescription());
             this.Text = "Теоретичні відомості - " + instance.Name;
 
         }
