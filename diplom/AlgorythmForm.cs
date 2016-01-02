@@ -57,7 +57,17 @@ namespace diplom
 
         private void button4_Click(object sender, EventArgs e)
         {
-            List<List<int>> arr = LoadFromTextBoxes();
+            List<List<int>> arr;
+            try
+            {
+                arr = LoadFromTextBoxes();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Не введено вхідних даних", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
 
             IAlgorythm newAlgorythm = Agent.Analyse(arr);
             if (newAlgorythm.GetType() != instance.GetType())

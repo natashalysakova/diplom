@@ -46,6 +46,7 @@
     <Compile Include="BaseAlgorythm.cs" />
     <Compile Include="BranchAndBound.cs" />
     <Compile Include="CombineMethod.cs" />
+    <Compile Include="CombineMethodTests.cs" />
     <Compile Include="DynamicalProgramming.cs" />
     <Compile Include="DynamicalProgrammingTestClass.cs" />
     <Compile Include="ExtensionMethodsTestClass.cs" />

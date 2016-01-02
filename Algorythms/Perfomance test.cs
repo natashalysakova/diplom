@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 namespace Algorythms
 {
     [TestClass]
-    public class Perfomance_test
+    public class PerfomanceTest
     {
         int Count = 6;
         List<List<int>> arr = new List<List<int>>();
 
         [TestMethod]
-        public void PerfomanceTest()
+        public void PerfomanceTest1()
         {
             Dictionary<IAlgorythm, Dictionary<int, List<long>>> res = new Dictionary<IAlgorythm, Dictionary<int, List<long>>>();
             List<IAlgorythm> instances = new List<IAlgorythm>() { new DynamicalProgramming(), new BranchAndBound(), new CombineMethod() };
             //List<IAlgorythm> instances = new List<IAlgorythm> { new BranchAndBound() };
 
-            Count = 1000;
+            Count = 5;
             NewData();
             Recalculate(res, instances);
 
-            Count = 10000;
+            Count = 10;
             NewData();
             Recalculate(res, instances);
 
